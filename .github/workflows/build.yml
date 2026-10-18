@@ -1,0 +1,21 @@
+name: Build Bruce Lite FAP
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build Flipper App
+        id: build-app
+        uses: flipperdevices/flipperzero-ufbt-action@v0.1
+        with:
+          sdk-channel: release
+      - name: Upload FAP
+        uses: actions/upload-artifact@v4
+        with:
+          name: BruceLite-FAP
+          path: ${{ steps.build-app.outputs.fap-artifacts }}
