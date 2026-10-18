@@ -1,0 +1,9 @@
+App(
+    appid="bruce_lite",
+    name="Bruce Lite",
+    apptype=FlipperAppType.EXTERNAL,
+    entry_point="bruce_lite_app",
+    requires=["gui"],
+    stack_size=2048,
+    fap_category="Tools",
+)
