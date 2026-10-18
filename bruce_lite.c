@@ -11,6 +11,7 @@
 #include <flipper_format/flipper_format.h>
 #include <infrared.h>
 #include <infrared_worker.h>
+#include <infrared_transmit.h>
 #include <nfc/nfc.h>
 #include <nfc/nfc_scanner.h>
 #include <stdlib.h>
